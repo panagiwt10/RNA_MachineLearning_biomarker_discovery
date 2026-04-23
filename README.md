@@ -61,7 +61,7 @@ To interpret model decisions, **SHAP values** were calculated. These values high
 ### 4. Expression Profiles of Top Biomarkers
 Visual verification of the top 6 biomarkers (identified via SHAP and DESeq2) showing distinct expression patterns across cancer classes.
 
-**### 5. Exploratory Data Visualization (Dimensionality Reduction)
+### 5. Exploratory Data Visualization (Dimensionality Reduction)
 Before biomarker selection, we performed unsupervised dimensionality reduction to assess sample clustering and data quality. Three distinct approaches were compared:
 
 * **Initial PCA (`pca_initial.png`):** This linear transformation visualizes the primary axes of variance in the raw count data. It helps identify natural groupings and potential outliers in the dataset.
