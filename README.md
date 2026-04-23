@@ -61,6 +61,16 @@ To interpret model decisions, **SHAP values** were calculated. These values high
 ### 4. Expression Profiles of Top Biomarkers
 Visual verification of the top 6 biomarkers (identified via SHAP and DESeq2) showing distinct expression patterns across cancer classes.
 
+**### 5. Exploratory Data Visualization (Dimensionality Reduction)
+Before biomarker selection, we performed unsupervised dimensionality reduction to assess sample clustering and data quality. Three distinct approaches were compared:
+
+* **Initial PCA (`pca_initial.jpg`):** This linear transformation visualizes the primary axes of variance in the raw count data. It helps identify natural groupings and potential outliers in the dataset.
+* **Log-Transformed PCA (`pca_log.jpg`):** By applying a log transformation before PCA, we normalize the high dynamic range of RNA-seq counts. This emphasizes biological fold-changes over absolute count differences, typically resulting in much clearer separation between cancer types.
+* **Sammon Mapping (`sammon_mapping.jpg`):** Unlike PCA, this is a non-linear dimensionality reduction technique that specifically attempts to preserve the relative distances between all pairs of samples. It is highly effective for revealing complex local structures that linear methods might overlook.
+
+**Visual Comparison:**
+<img src="images/pca_initial.jpg" width="300" alt="Initial PCA"> <img src="images/pca_log.jpg" width="300" alt="Log PCA"> <img src="images/sammon_mapping.jpg" width="300" alt="Sammon Map">**
+
 ---
 
 ## 📊 Key Findings
